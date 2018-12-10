@@ -17,7 +17,7 @@
   "standard-version": {
     "skip": {
       "changelog": true,
-      "commit": false
+      "commit": true
     }
   },
   "dependencies": {
