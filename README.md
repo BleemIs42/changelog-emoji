@@ -1,4 +1,4 @@
-# changelog
+# changelog-emoji
 
 Generate changelog
 
