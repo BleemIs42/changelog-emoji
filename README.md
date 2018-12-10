@@ -13,18 +13,21 @@ npm install changelog-emoji -g
 ## Usage
 
 ```
-changelog
+npx changelog
 ```
 
 You can use it with [standard-version](https://github.com/conventional-changelog/standard-version),
 Config in `package.json`.
 ```json
 "script": {
-  "release": "standard-version && changelog"
+  "release": "standard-version"
 },
 "standard-version": {
   "skip": {
     "changelog": true
+  },
+  "scripts": {
+    "postbump": "yarn changelog
   }
 }
 ```

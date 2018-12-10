@@ -1,6 +1,6 @@
 {
   "name": "changelog-emoji",
-  "version": "0.0.7",
+  "version": "0.0.14",
   "description": "Generate changelog",
   "bin": {
     "changelog": "bin/index.js"
@@ -11,13 +11,16 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "release": "standard-version && yarn changelog",
+    "release": "standard-version",
     "changelog": "node bin/index.js"
   },
   "standard-version": {
     "skip": {
       "changelog": true,
       "commit": true
+    },
+    "scripts": {
+      "postbump": "yarn changelog"
     }
   },
   "dependencies": {
