@@ -1,5 +1,5 @@
 {
-  "name": "changelog",
+  "name": "changelog-emoji",
   "version": "0.0.2",
   "description": "Generate changelog",
   "bin": {
@@ -11,7 +11,13 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "release": "standard-version"
+    "release": "standard-version",
+    "changelog": "node bin/index.js"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
   },
   "dependencies": {
     "conventional-changelog-core": "^3.1.5",
